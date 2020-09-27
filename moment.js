@@ -37,7 +37,8 @@ $(document).ready(function() {
   // if it is in local storage, put the value into the input field
   // $(`#${inputId}`).val(item)
 })
-
+//store inputId();
+  //render inputId();
 function setColor(element, color) {
  element.style.backgroundColor = color;
 }
