@@ -35,15 +35,15 @@ $(document).ready(function() {
  const saveBtn = document.getElementById("hour");
  
   // check if item is in localStorage for all inputs
-//function description(){
-  //const description = description.value;
-//}
+function description(){
+  const description = description.value;
+}
 
   hour.onclick = function(){
 
  const value = text.value;
- console.log ("description");
-  console.log ("text");
+ console.log (description);
+  console.log (text);
 
 
   if (description && hour) {
