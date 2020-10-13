@@ -23,39 +23,57 @@ if (rowHour === currentHour) {
   $(this).addClass("future");
 }
 
-$(".saveBtn").click(function(){
-  const id = $(this).attr("id")
-  const inputId = id + "Input"
-  localStorage.setItem(inputId, $(`#${inputId}`).val())
-})
+//$(".saveBtn").click(function(){
+  //const id = $(this).attr("id")
+ // const inputId = id + "Input"
+ // localStorage.setItem(inputId, $(`#${inputId}`).val())
+//})
 
 $(document).ready(function() {
  
- const description = document.getElementById("description");
- const saveBtn = document.getElementById("hour");
+ const rowInput = document.querySelector(".row");
+ const description = document.getElementById ("description");
+ const hourInput = document.getElementById ("hour");
+ const saveBtn = document.querySelector(".saveBtn");
+ const storedText = localStorage.getItem("hourInput");
  
+
+ //if(storedText) {
+   //text.textContent = storedText
+ //}
+ rowInput.addEventListener('input', letter => {
+   console.log(localStorage)
+   description.textContent = letter.target.value
+
+ })
+
+ //const saveToLocalStorage = () => {
+ /// localStorage.setItem("textinput", description.textContent)
+ //}
+
+// saveBtn.addEventListener("click", saveToLocalStorage)
   // check if item is in localStorage for all inputs
-function description(){
-  const description = description.value;
-}
+//function description(){
+  //const description = description.value;
+//}
 
-  hour.onclick = function(){
+  //saveBtn.onclick = function(){
 
- const value = text.value;
- console.log (description);
-  console.log (text);
+ //const value = text.value;
+//console.log (description);
+ // console.log (text);
 
 
-  if (description && hour) {
-    localStorage.SetItem(description, text);
-
-  }
-  };
-  for (let i = 0; i <localStorage.length; i++){
-const description = localStorage.description(i);
-const value = localStorage.getItem(description);
-hour.innerHTML +=`${description}: ${text}<br />`;
-  }
+ // if (description && hour) {
+    //localStorage.setItem('description', 'hour');
+    //location.reload()
+ // }
+ // };
+  //for (let i = 0; i <localStorage.length; i++){
+//const description = localStorage.description(i);
+//const value = localStorage.getItem(description);
+//hour.innerHTML +=`${description}: ${text}<br />`;
+  //}
 
   //localStorage.setItem('inputId', 'text')
   
@@ -63,9 +81,9 @@ hour.innerHTML +=`${description}: ${text}<br />`;
  // localStorage.getItem('inputID');
   // if it is in local storage, put the value into the input field
   // $(`#${inputId}`).val(item)
-})
+//})
 //store description();
   //render inputId();
 function setColor(element, color) {
  element.style.backgroundColor = color;
-}});
+}},)});
