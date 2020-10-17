@@ -6,9 +6,9 @@ console.log(m.format("dddd, MMMM Do YYYY, h:mm:ss a"));
 document.getElementById('currentDay').innerHTML = m;
 //moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 
-//var mmoment = Time;
+//var mmoment = Time;--
 //Time = currentHour
-$(".row").each(function(){
+$(".row").each(function(){  
   const currentHour = parseInt(m.format("H"));
   const rowHour = parseInt($(this).attr("id"));
 console.log(currentHour);
@@ -23,35 +23,37 @@ if (rowHour === currentHour) {
   $(this).addClass("future");
 }
 
-//$(".saveBtn").click(function(){
-  //const id = $(this).attr("id")
- // const inputId = id + "Input"
- // localStorage.setItem(inputId, $(`#${inputId}`).val())
-//})
+$(".saveBtn").click(function(){
+  const id = $(this).attr("id")
+ const inputId = id + "Input"
+ localStorage.setItem(inputId, $(`#${inputId}`).val())
+})
 
 $(document).ready(function() {
  
  const rowInput = document.querySelector(".row");
- const description = document.getElementById ("description");
- const hourInput = document.getElementById ("hour");
+ const textarea = document.getElementById ("#textarea");
+ //const hourInput = document.getElementById ("hour");
  const saveBtn = document.querySelector(".saveBtn");
  const storedText = localStorage.getItem("hourInput");
  
 
- //if(storedText) {
-   //text.textContent = storedText
- //}
- rowInput.addEventListener('input', letter => {
-   console.log(localStorage)
-   description.textContent = letter.target.value
+ if(storedText) {
+   textarea.textContent = storedText
+ }
+rowInput.addEventListener('textarea', lettter => {
+  console.log(localStorage)
+  textarea.textContent = letter.target.value
 
- })
+})
 
  //const saveToLocalStorage = () => {
- /// localStorage.setItem("textinput", description.textContent)
+//localStorage.setItem("textinput", description.textContent)
+
+ 
  //}
 
-// saveBtn.addEventListener("click", saveToLocalStorage)
+//saveBtn.addEventListener("click", saveToLocalStorage)
   // check if item is in localStorage for all inputs
 //function description(){
   //const description = description.value;
