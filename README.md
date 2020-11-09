@@ -15,5 +15,12 @@ Create input field for each time block and include save button so users can save
 
 This project utilizes Bootstrap, moment.js and Jquery
 
+# License
+MIT
+
+# Links
+https://fedub1.github.io/Workday-Scheduler/
+
+
 
 
