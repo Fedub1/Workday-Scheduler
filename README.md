@@ -1,4 +1,4 @@
-# Employee Tracker
+# Workday Scheduler
 
 # Installation 
 
